@@ -1,9 +1,15 @@
 # Examen Técnico - Analítica y Ciencia de Datos Avanzada
 
+## 🚀 Instalación
+
+```bash
+pip install -r requirements.txt
+```
+
 ## 🎯 Contexto del Proyecto
 
-**Cliente:** Retailer con 10 tiendas distribuidas por regiones  
-**Objetivo:** Optimizar reposición de inventarios mediante modelos predictivos y dashboards interactivos  
+**Cliente:** Retailer con 10 tiendas distribuidas por regiones
+**Objetivo:** Optimizar reposición de inventarios mediante modelos predictivos y dashboards interactivos
 **Alcance:** Análisis de elasticidad de precios e impacto climático en demanda
 
 ## 📊 Datasets Disponibles
@@ -18,19 +24,17 @@
 
 ---
 
+### 📁 Preparación de Archivos
+
+- **Conversión:** Excel → Parquet para mejor rendimiento
+- **Estructura:** Separación por datasets individuales
+- **Encoding:** Normalización de caracteres especiales y tildes en los titulos
+
 ### 🧹 Limpieza de Datos
 
-- **Datos Faltantes:** Imputar valores, interpolación temporal
-- **Duplicados:** Registros exactos y parciales
-- **Formato:** Fechas, números, texto (mayúsculas/minúsculas)
-- **Outliers:** Z-score, IQR, valores contextuales
-- **Errores:** Tipográficos, espacios extra, caracteres especiales
-
-### 🔄 Homologación de Datos
-
-- **Nomenclatura:** Nombres productos/tiendas, códigos ID
-- **Estructural:** Esquemas tablas, orden columnas, tipos datos
-- **Semántica:** Términos equivalentes ("Cliente" vs "Customer")
-- **Unidades:** Monedas, medidas, escalas tiempo
-- **Codificación:** Categorización, jerarquías, mapeo valores
-
+- **IDs consistentes:** Convertí "Producto_1", "Tienda_1" → números enteros (1, 2, 3...)
+- **Fechas:** Formato datetime64[ns] para análisis temporal
+- **Marcas:** Minúsculas sin prefijos ("marca_a" → "a")
+- **Sin duplicados:** Verificado en todos los datasets
+- **Outliers:** Mantenidos (son datos de negocio válidos, no errores)
+- **Rangos:** Validados precios, descuentos y fechas
