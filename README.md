@@ -1,3 +1,4 @@
+````markdown
 # Examen Técnico - Analítica y Ciencia de Datos Avanzada
 
 ## 🚀 Instalación
@@ -5,11 +6,12 @@
 ```bash
 pip install -r requirements.txt
 ```
+````
 
 ## 🎯 Contexto del Proyecto
 
-**Cliente:** Retailer con 10 tiendas distribuidas por regiones
-**Objetivo:** Optimizar reposición de inventarios mediante modelos predictivos y dashboards interactivos
+**Cliente:** Retailer con 10 tiendas distribuidas por regiones  
+**Objetivo:** Optimizar reposición de inventarios mediante modelos predictivos y dashboards interactivos  
 **Alcance:** Análisis de elasticidad de precios e impacto climático en demanda
 
 ## 📊 Datasets Disponibles
@@ -28,7 +30,7 @@ pip install -r requirements.txt
 
 - **Conversión:** Excel → Parquet para mejor rendimiento
 - **Estructura:** Separación por datasets individuales
-- **Encoding:** Normalización de caracteres especiales y tildes en los titulos
+- **Encoding:** Normalización de caracteres especiales y tildes en los títulos
 
 ### 🧹 Limpieza de Datos
 
@@ -38,3 +40,18 @@ pip install -r requirements.txt
 - **Sin duplicados:** Verificado en todos los datasets
 - **Outliers:** Mantenidos (son datos de negocio válidos, no errores)
 - **Rangos:** Validados precios, descuentos y fechas
+
+### 🗃️ Base de Datos SQL
+
+**Tecnología:** SQLite local para análisis
+
+- **Migración:** Datasets limpios → Tablas SQL
+- **Vista integrada:** `vista_inventario_ventas`
+  - Combina inventario actual + ventas históricas totales
+  - Incluye información de productos (categoría, marca) y tiendas (región)
+  - Calcula precio promedio por tienda-producto
+- **Scripts:** `create_database.py`, `execute_views.py`, `views.sql`
+
+```
+
+```
