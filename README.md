@@ -2,16 +2,14 @@
 
 ## 🚀 Instalación
 
-````markdown
 ```bash
 pip install -r requirements.txt
 ```
-````
 
 ## 🎯 Contexto del Proyecto
 
-**Cliente:** Retailer con 10 tiendas distribuidas por regiones  
-**Objetivo:** Optimizar reposición de inventarios mediante modelos predictivos y dashboards interactivos  
+**Cliente:** Retailer con 10 tiendas distribuidas por regiones
+**Objetivo:** Optimizar reposición de inventarios mediante modelos predictivos y dashboards interactivos
 **Alcance:** Análisis de elasticidad de precios e impacto climático en demanda
 
 ## 📊 Datasets Disponibles
@@ -23,8 +21,6 @@ pip install -r requirements.txt
 - 🌤️ Información climática semanal por región
 
 ## ✅ Procesos Realizados
-
----
 
 ### 📁 Preparación de Archivos
 
@@ -52,7 +48,28 @@ pip install -r requirements.txt
   - Incluye información de productos y regiones
 - **Scripts:** `create_database.py`, `execute_views.py`, `views.sql`
 
-## 📊 Analisis
+## 📈 Visualizaciones Dashboard
+
+### **Análisis Básico**
+
+1. **Ventas entre tiendas y regiones** - Gráfica de barras apiladas por región
+2. **Evolución de Ventas por Región (2023-2025)** - Serie de tiempo con múltiples líneas
+3. **Impacto Climático en Ventas** - Serie temporal: ventas vs temperatura promedio
+
+### **Sistema de Alertas**
+
+4. **Detección de Anomalías en Ventas Semanales** - Scatter plot temporal con código de colores
+5. **Inventario Crítico** - Gráfica de barras con días de stock restante
+6. **Períodos en Declive** - Scatter plot por mes agrupado
+
+### **Análisis de Elasticidad**
+
+7. **Sensibilidad a Descuentos por Producto** - Scatter plot: descuento vs ventas
+8. **Ranking de Elasticidad** - Barras horizontales ordenadas por elasticidad
+
+**Total: 8 visualizaciones** cubriendo análisis completo de retail
+
+## 📊 Análisis de Datos
 
 **20,800 registros con campos:**
 
